@@ -105,6 +105,10 @@ h1 span {
   height: 100vh;
 }
 
+.about-img {
+  width: 50%;
+}
+
 .about img {
   width: 100%;
   height: 100%;
