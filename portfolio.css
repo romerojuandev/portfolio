@@ -290,6 +290,8 @@ h1 span {
   cursor: pointer;
   font-weight: 600;
   border: none;
+  padding: 10px;
+  border-radius: 7px;
 }
 
 .btn-submit:hover {

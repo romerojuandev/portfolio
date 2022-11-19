@@ -166,10 +166,22 @@
         <div class="contact-form">
           <form class="form">
             <h3>Send me a message...</h3>
-            <input type="text" placeholder="Name" /><br />
-            <input type="email" placeholder="Email" /><br />
-            <textarea placeholder="Leave your message here"></textarea><br />
-            <input type="submit" class="btn-submit" value="Send message" />
+            <input name="name" id="name" type="text" placeholder="Name" /><br />
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Email"
+            /><br />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Leave your message here"
+            ></textarea
+            ><br />
+            <button type="submit" class="btn-submit" value="Send message">
+              Send
+            </button>
           </form>
         </div>
       </div>
@@ -187,4 +199,5 @@
       </div>
     </div>
   </body>
+  <script src="portfolio.js" type="module"></script>
 </html>
