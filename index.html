@@ -21,8 +21,8 @@
           <ul class="menu">
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#form">Contact</a></li>
           </ul>
         </div>
       </header>
@@ -44,9 +44,12 @@
         </div>
         <img src="./assets/img/header-img.svg" alt="img" />
       </main>
+      <button type="button">
+        <img class="scroll-btn hidden" src="./assets/img/arrow-up.png" alt="" />
+      </button>
     </div>
 
-    <div class="about">
+    <div id="about" class="about">
       <div class="about-img">
         <img src="./assets/img/about-img.avif" alt="imagen del about me" />
       </div>
@@ -91,7 +94,7 @@
         </div>
       </div>
     </div>
-    <div class="portfolio">
+    <div id="portfolio" class="portfolio">
       <div class="portfolio-headings">
         <h2>My Portfolio</h2>
         <div class="divider"></div>
@@ -153,7 +156,7 @@
         </div>
       </div>
     </div>
-    <div class="contact-section">
+    <div id="form" class="contact-section">
       <div class="contact-headings">
         <h2>Keep in touch</h2>
         <div class="divider"></div>
@@ -166,12 +169,19 @@
         <div class="contact-form">
           <form class="form">
             <h3>Send me a message...</h3>
-            <input name="name" id="name" type="text" placeholder="Name" /><br />
+            <input
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Name"
+              required
+            /><br />
             <input
               name="email"
               id="email"
               type="email"
               placeholder="Email"
+              required
             /><br />
             <textarea
               name="message"
@@ -182,6 +192,12 @@
             <button type="submit" class="btn-submit" value="Send message">
               Send
             </button>
+            <div class="form-loader none">
+              <p>Loader...</p>
+            </div>
+            <div class="form-response none">
+              <p>Message sent successfully</p>
+            </div>
           </form>
         </div>
       </div>
