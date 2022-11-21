@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
@@ -98,6 +102,35 @@ h1 span {
 .main img {
   width: 350px;
   margin-left: 300px;
+}
+
+.scroll-btn {
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  z-index: 999;
+  width: 4rem;
+  height: 4rem;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: aqua;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 3px 11px 5px rgba(102, 231, 200, 0.4);
+}
+
+.scroll-btn:hover {
+  box-shadow: 1px 3px 11px 5px rgba(255, 255, 255, 0.4);
+  background-color: black;
+  color: #fff;
+  transition: ease-in 0.3s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .about {
@@ -298,6 +331,10 @@ h1 span {
   color: #fff;
   transform: scale(1.1);
   transition: ease-in 0.4s;
+}
+
+.none {
+  display: none;
 }
 
 .footer {
