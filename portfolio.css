@@ -95,7 +95,7 @@ body {
 
 .astro-container img {
   top: 0;
-  animation: astrofloating 10s ease-in-out infinite;
+  animation: astrofloating 15s ease-in-out infinite;
 }
 
 @keyframes astrofloating {
@@ -110,10 +110,52 @@ body {
 
 h1 {
   font-size: 3em;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 h1 span {
   color: aqua;
+  position: relative;
+  display: inline-block;
+}
+
+h1 span:nth-child(1) {
+  animation: jumping 4s alternate infinite;
+  animation-delay: 0s;
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  40% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100px) rotate(180deg);
+  }
+  60% {
+    transform: translateY(0px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+h1 span:nth-child(2) {
+  animation: jumping 4s alternate infinite;
+  animation-delay: 0.4s;
+}
+
+h1 span:nth-child(3) {
+  animation: jumping 4s alternate infinite;
+  animation-delay: 0.7s;
+}
+
+h1 span:nth-child(4) {
+  animation: jumping 4s alternate infinite;
+  animation-delay: 0.4s;
 }
 
 .download-cv {
@@ -130,9 +172,10 @@ h1 span {
 }
 
 .download-cv:hover {
-  background-color: #fff;
+  background-color: black;
+  color: #fff;
   box-shadow: 1px 3px 11px 5px rgba(255, 255, 255, 0.4);
-  transition: ease-in 0.3s;
+  transition: ease-in 0.6s;
 }
 
 .main img {
