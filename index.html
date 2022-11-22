@@ -42,10 +42,16 @@
             ><button class="download-cv">Download CV</button></a
           >
         </div>
-        <img src="./assets/img/header-img.svg" alt="img" />
+        <div class="astro-container">
+          <img src="./assets/img/header-img.svg" alt="img" />
+        </div>
       </main>
-      <button type="button">
-        <img class="scroll-btn hidden" src="./assets/img/arrow-up.png" alt="" />
+      <button type="button" class="scroll-btn hidden">
+        <img
+          class="scroll-btn-img hidden"
+          src="./assets/img/arrow-up.png"
+          alt=""
+        />
       </button>
     </div>
 
@@ -192,11 +198,14 @@
             <button type="submit" class="btn-submit" value="Send message">
               Send
             </button>
-            <div class="form-loader none">
-              <p>Loader...</p>
+            <div class="loader-container none">
+              <div class="loader"><span></span></div>
+              <div class="loader"><span></span></div>
+              <div class="loader"><i></i></div>
+              <div class="loader"><i></i></div>
             </div>
-            <div class="form-response none">
-              <p>Message sent successfully</p>
+            <div class="form-response">
+              <p>Thanks for your message!!!</p>
             </div>
           </form>
         </div>
@@ -205,11 +214,15 @@
     <div class="footer">
       <div class="footer-content">
         <div class="social-network">
-          <a href="#"><img src="./assets/img/linkedin.png" alt="linkedin" /></a>
+          <a href="https://www.linkedin.com/in/romerdev/"
+            ><img src="./assets/img/linkedin.png" alt="linkedin"
+          /></a>
           <a href="#"
             ><img src="./assets/img/instagram.png" alt="instagram"
           /></a>
-          <a href="#"><img src="./assets/img/github.png" alt="github" /></a>
+          <a href="https://github.com/juancho1720"
+            ><img src="./assets/img/github.png" alt="github"
+          /></a>
         </div>
         <p>Pagina hecha por Juancito para su portfolio personal</p>
       </div>

@@ -1,21 +1,24 @@
 const d = document;
 const w = window;
 
-export function scrollTopButton(btn) {
+export function scrollTopButton(img, btn) {
+  const $scrollImg = d.querySelector(img);
   const $scrollBtn = d.querySelector(btn);
 
   w.addEventListener("scroll", (e) => {
     let scrollTop = w.pageYOffset || d.documentElement.scrollTop;
 
     if (scrollTop > 600) {
+      $scrollImg.classList.remove("hidden");
       $scrollBtn.classList.remove("hidden");
     } else {
+      $scrollImg.classList.add("hidden");
       $scrollBtn.classList.add("hidden");
     }
   });
 
   d.addEventListener("click", (e) => {
-    if (e.target.matches(btn)) {
+    if (e.target.matches(img)) {
       w.scrollTo({
         behavior: "smooth",
         top: 0,
@@ -33,7 +36,7 @@ export function enviarFormulario(e) {
 
 export function mensajeFormulario() {
   const $form = d.querySelector(".form");
-  const $loader = d.querySelector(".form-loader");
+  const $loader = d.querySelector(".loader-container");
   const $response = d.querySelector(".form-response");
 
   $loader.classList.remove("none");

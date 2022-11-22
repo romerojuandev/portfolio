@@ -7,7 +7,7 @@ import {
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
-  scrollTopButton(".scroll-btn");
+  scrollTopButton(".scroll-btn-img", ".scroll-btn");
 });
 
 d.addEventListener("submit", (e) => {

@@ -72,6 +72,55 @@ body {
   align-items: center;
 }
 
+.info-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.astro-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.astro-container img {
+  top: 0;
+  animation: astrofloating 15s ease-in-out infinite;
+}
+
+@keyframes astrofloating {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-120px);
+  }
+  30% {
+    transform: translateY(-240px);
+  }
+  45% {
+    transform: translateY(-120px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(120px);
+  }
+  90% {
+    transform: translateY(240px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 h1 {
   font-size: 3em;
 }
@@ -104,7 +153,7 @@ h1 span {
   margin-left: 300px;
 }
 
-.scroll-btn {
+.scroll-btn-img {
   position: fixed;
   bottom: 1vh;
   right: 1vw;
@@ -121,7 +170,7 @@ h1 span {
   box-shadow: 1px 3px 11px 5px rgba(102, 231, 200, 0.4);
 }
 
-.scroll-btn:hover {
+.scroll-btn-img:hover {
   box-shadow: 1px 3px 11px 5px rgba(255, 255, 255, 0.4);
   background-color: black;
   color: #fff;
@@ -325,6 +374,7 @@ h1 span {
   border: none;
   padding: 10px;
   border-radius: 7px;
+  color: white;
 }
 
 .btn-submit:hover {
@@ -333,8 +383,82 @@ h1 span {
   transition: ease-in 0.4s;
 }
 
-.none {
-  display: none;
+.loader-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+
+.loader:nth-child(2),
+.loader:nth-child(4) {
+  animation-delay: -1s;
+  filter: hue-rotate(290deg);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container .loader:nth-child(1)::before,
+.loader-container .loader:nth-child(2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(to top, transparent, rgba(134, 52, 149, 1));
+  background-size: 100px 180px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.loader i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #863495;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 0 0 10px #863495, 0 0 20px #863495, 0 0 30px #863495,
+    0 0 40px #863495, 0 0 50px #863495, 0 0 60px #863495, 0 0 70px #863495,
+    0 0 80px #863495, 0 0 90px #863495, 0 0 100px #863495;
+}
+
+.loader span {
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  background: white;
+  z-index: 1;
+}
+
+.form-response {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
 }
 
 .footer {
@@ -379,4 +503,8 @@ h1 span {
 .social-network a img:hover {
   transform: translateY(-15px);
   transition: ease-out 0.5s;
+}
+
+.none {
+  display: none;
 }
