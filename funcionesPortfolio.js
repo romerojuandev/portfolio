@@ -8,7 +8,7 @@ export function scrollTopButton(img, btn) {
   w.addEventListener("scroll", (e) => {
     let scrollTop = w.pageYOffset || d.documentElement.scrollTop;
 
-    if (scrollTop > 600) {
+    if (scrollTop > 900) {
       $scrollImg.classList.remove("hidden");
       $scrollBtn.classList.remove("hidden");
     } else {
