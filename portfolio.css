@@ -577,3 +577,38 @@ h1 span:nth-child(4) {
 .none {
   display: none;
 }
+
+@media screen and (max-width: 450px) {
+  header {
+    margin-left: -26px;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu a {
+    padding: 0;
+  }
+
+  .info-content {
+    width: 250px;
+    margin-top: 100px;
+  }
+  .astro-container {
+    display: none;
+  }
+
+  .download-cv {
+    margin-top: 90px;
+  }
+}
