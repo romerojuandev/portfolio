@@ -684,4 +684,8 @@ h1 span:nth-child(4) {
   .contact-img {
     display: none;
   }
+
+  .scroll-btn-img {
+    right: 40px;
+  }
 }
