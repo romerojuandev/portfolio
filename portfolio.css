@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -616,6 +617,10 @@ h1 span:nth-child(4) {
     margin-top: 15px;
   }
 
+  .about-img {
+    display: none;
+  }
+
   .about-info h2 {
     margin-left: -30px;
   }
@@ -686,6 +691,6 @@ h1 span:nth-child(4) {
   }
 
   .scroll-btn-img {
-    right: 40px;
+    right: 25px;
   }
 }
