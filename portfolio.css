@@ -350,6 +350,14 @@ h1 span:nth-child(4) {
   border-radius: 9px 9px 0px 0px;
 }
 
+.menu-sistema {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 150px;
+  border-radius: 9px;
+}
+
 .projects-links a:hover img {
   transform: translateY(-5px);
   transition: ease-out 0.5s;
